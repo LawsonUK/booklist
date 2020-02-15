@@ -11,13 +11,11 @@ export const bookReducer = (state, action) => {
           id: uuid()
         }
       ]
-      break
+
     case "REMOVE_BOOK":
       return state.filter(book => book.id !== action.id)
-      break
 
     default:
       return state
-      break
   }
 }
